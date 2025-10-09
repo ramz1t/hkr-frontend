@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Web Shop</title>
+        <link rel="stylesheet" href="/static/styles/reset.css" />
+        <link rel="stylesheet" href="/static/styles/style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="layout">
+        <header class="layout__header shadow">
+            <a href="/" class="header__logo">
+                <img
+                    src="/static/images/logo.png"
+                    alt="Grocket logo"
+                    class="header__logo-img"
+                />
+                <p class="u-hidden-mobile logo__text">Grocket</p>
+            </a>
+
+            <div
+                aria-label="search box"
+                class="header__search search u-hidden-mobile"
+            >
+                <span
+                    aria-hidden="true"
+                    class="material-symbols-outlined search__icon"
+                    >search</span
+                >
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    class="search__input"
+                />
+                <ul class="search__list shadow">
+                    <li class="search__list-item">1984</li>
+                    <li class="search__list-item">Metro 2033</li>
+                    <li class="search__list-item">451 Farenheit</li>
+                </ul>
+            </div>
+
+            <nav class="header__nav">
+                <a class="nav__link" href="">Home</a>
+                <a class="nav__link" href="">Categories</a>
+                <a href="/cart.html" class="nav__link nav__cart-link">
+                    <span class="u-hidden-mobile">Go to Cart</span>
+                    <span aria-hidden="true" class="cart-link__icon-stack">
+                        <span
+                            class="material-symbols-outlined cart-link__icon cart-link__icon--cart"
+                            >shopping_cart</span
+                        >
+                        <span
+                            class="material-symbols-outlined cart-link__icon cart-link__icon--arrow"
+                            >arrow_right_alt</span
+                        >
+                    </span>
+                </a>
+            </nav>
+        </header>
+
+        <aside class="layout__sidebar">
+            <div class="sidebar__section">
+                <h2 class="sidebar__title u-hidden-mobile">Categories</h2>
+                <ul class="sidebar__list sidebar__categories">
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">robot</span
+                        ><span>Fiction</span
+                        ><span class="category__count">12</span>
+                    </li>
+                    <li class="sidebar__item sidebar__item--active">
+                        <span class="material-symbols-outlined">brush</span
+                        ><span>Art</span><span class="category__count">3</span>
+                    </li>
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">biotech</span
+                        ><span>Science</span
+                        ><span class="category__count">5</span>
+                    </li>
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">travel</span
+                        ><span>Travel</span
+                        ><span class="category__count">9</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div
+                class="sidebar__section u-hidden-mobile"
+                style="margin-top: var(--spacing-lg)"
+            >
+                <h2
+                    class="sidebar__title"
+                    style="margin-bottom: var(--spacing-md)"
+                >
+                    Filters
+                </h2>
+                <form class="sidebar__list sidebar__fields">
+                    <label class="fields__input-group"
+                        >Min:
+                        <input
+                            class="input-group__input"
+                            type="number"
+                            min="0"
+                            name="min-price"
+                    /></label>
+                    <label class="fields__input-group"
+                        >Max:
+                        <input
+                            class="input-group__input"
+                            type="number"
+                            min="0"
+                            name="max-price"
+                    /></label>
+                    <label class="fields__input-group"
+                        >Author:
+                        <select class="input-group__input" name="author">
+                            <option value="">All</option>
+                            <option value="sebastian_schutze">
+                                Sebastian Schutze
+                            </option>
+                            <option value="tobias_g_natter">
+                                Tobias G. Natter
+                            </option>
+                            <option value="loske/lowengard">
+                                Loske/lowengard
+                            </option>
+                            <option value="leo_tolstoy">Leo Tolstoy</option>
+                            <option value="edgar_rice_burroughs">
+                                Edgar Rice Burroughs
+                            </option>
+                            <option value="dashiell_hammett">
+                                Dashiell Hammett
+                            </option>
+                            <option value="raymond_chandler">
+                                Raymond Chandler
+                            </option>
+                        </select>
+                    </label>
+                    <label class="fields__input-group"
+                        >Edition:
+                        <select class="input-group__input" name="genre">
+                            <option value="">All</option>
+                            <option value="fiction">Limited</option>
+                            <option value="nonfiction">Hardcover</option>
+                            <option value="biography">Pocket-size</option>
+                        </select>
+                    </label>
+                    <button class="sidebar__section__btn">Apply</button>
+                </form>
+            </div>
+        </aside>
+
+        <main class="layout__main main">
+            <h1 class="main__header">
+                Books especially for
+                <span class="prism-bg" style="margin-left: 5px"
+                    ><span>you</span></span
+                >
+            </h1>
+            <ul aria-label="items for you" class="product-list">
+                <li
+                    aria-label="book Carravagio. The complete works"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/1.webp');
+                        "
+                        aria-details="image of the book 1"
+                    ></div>
+                    <p class="product-card__title">
+                        Carravagio. The complete works
+                    </p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Sebastian Schutze</p>
+                    <p class="product-card__price price">
+                        <span class="prism-bg"><span>270</span></span>
+                    </p>
+                    <p class="product-card__price--old price">350</p>
+                    <a href="cart.html" class="product-card__btn"></a>
+                </li>
+                <li
+                    aria-label="book Gustav Klimt. Complete paintings"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/2.webp');
+                        "
+                        aria-label="image of the book 2"
+                    ></div>
+                    <p class="product-card__title">
+                        Gustav Klimt. Complete Paintings
+                    </p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Tobias G. Natter</p>
+                    <p class="product-card__price price">219</p>
+                    <a
+                        href="cart.html"
+                        class="product-card__btn product-card__btn-added"
+                    ></a>
+                </li>
+                <li
+                    aria-label="book The book of colour concets"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/3.webp');
+                        "
+                        aria-label="image of the book 3"
+                    ></div>
+                    <p class="product-card__title">
+                        The Book of Colour Concepts
+                    </p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Loske/lowengard</p>
+                    <p class="product-card__price price">1637</p>
+                    <a
+                        href="cart.html"
+                        class="product-card__btn product-card__btn-added"
+                    ></a>
+                </li>
+            </ul>
+            <h1 class="main__header">
+                Books by
+                <span class="prism-bg" style="margin-left: 5px"
+                    ><span>Leo Tolstoy</span></span
+                >
+            </h1>
+            <ul aria-label="items for you" class="product-list">
+                <li
+                    aria-label="book Carravagio. The complete works"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/4.webp');
+                        "
+                        aria-details="image of the book 4"
+                    ></div>
+                    <p class="product-card__title">Hadji Murat</p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Leo Tolstoy</p>
+                    <p class="product-card__price price">273</p>
+                    <a href="cart.html" class="product-card__btn"></a>
+                </li>
+                <li
+                    aria-label="book Gustav Klimt. Complete paintings"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/5.webp');
+                        "
+                        aria-label="image of the book 5"
+                    ></div>
+                    <p class="product-card__title">Anna Karenina</p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Leo Tolstoy</p>
+                    <p class="product-card__price price">219</p>
+                    <a href="cart.html" class="product-card__btn"></a>
+                </li>
+                <li
+                    aria-label="book The book of colour concets"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/6.webp');
+                        "
+                        aria-label="image of the book 6"
+                    ></div>
+                    <p class="product-card__title">War and Peace</p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Leo Tolstoy</p>
+                    <p class="product-card__price price">637</p>
+                    <a href="cart.html" class="product-card__btn"></a>
+                </li>
+            </ul>
+            <h1 class="main__header">Pulp fiction</h1>
+            <ul aria-label="items for you" class="product-list">
+                <li
+                    aria-label="book Carravagio. The complete works"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/7.webp');
+                        "
+                        aria-details="image of the book 7"
+                    ></div>
+                    <p class="product-card__title">A Pincess of Mars</p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Edgar Rice Burroughs</p>
+                    <p class="product-card__price price">87</p>
+                    <a href="cart.html" class="product-card__btn"></a>
+                </li>
+                <li
+                    aria-label="book Gustav Klimt. Complete paintings"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/8.webp');
+                        "
+                        aria-label="image of the book 8"
+                    ></div>
+                    <p class="product-card__title">
+                        The Thin Man: Dashiell Hammett
+                    </p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Dashiell Hammett</p>
+                    <p class="product-card__price price">83</p>
+                    <a href="cart.html" class="product-card__btn"></a>
+                </li>
+                <li
+                    aria-label="book The book of colour concets"
+                    class="product-card"
+                >
+                    <div
+                        class="product-card__cover"
+                        style="
+                            background-image: url('/static/images/books/9.webp');
+                        "
+                        aria-label="image of the book 9"
+                    ></div>
+                    <p class="product-card__title">The Big Sleep</p>
+                    <p class="product-card__description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Assumenda qui laudantium placeat quia pariatur veritatis
+                        velit accusamus aliquid asperiores. Perspiciatis aliquid
+                        deserunt veniam nisi ratione ipsa, autem voluptatum hic
+                        repudiandae.
+                    </p>
+                    <p class="product-card__author">Raymond Chandler</p>
+                    <p class="product-card__price price">99</p>
+                    <a href="cart.html" class="product-card__btn"></a>
+                </li>
+            </ul>
+        </main>
+
+        <footer class="layout__footer">
+            <h3>Made by Timur</h3>
+            <a class="footer__contact-info" href="tel:0769991122">Call Me!</a>
+        </footer>
+    </body>
+</html>

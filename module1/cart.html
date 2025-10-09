@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cart</title>
+        <link rel="stylesheet" href="/static/styles/reset.css" />
+        <link rel="stylesheet" href="/static/styles/style.css" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+    </head>
+    <body class="layout">
+        <header class="layout__header shadow">
+            <a href="/" class="header__logo">
+                <img
+                    src="/static/images/logo.png"
+                    alt="Grocket logo"
+                    class="header__logo-img"
+                />
+                <p class="u-hidden-mobile logo__text">Grocket</p>
+            </a>
+
+            <div
+                aria-label="search box"
+                class="header__search search u-hidden-mobile"
+            >
+                <span
+                    aria-hidden="true"
+                    class="material-symbols-outlined search__icon"
+                    >search</span
+                >
+                <input
+                    type="text"
+                    placeholder="Search..."
+                    class="search__input"
+                />
+                <ul class="search__list shadow">
+                    <li class="search__list-item">1984</li>
+                    <li class="search__list-item">Metro 2033</li>
+                    <li class="search__list-item">451 Farenheit</li>
+                </ul>
+            </div>
+
+            <nav class="header__nav">
+                <a class="nav__link" href="">Home</a>
+                <a class="nav__link" href="">Categories</a>
+                <a href="/cart.html" class="nav__link nav__cart-link">
+                    <span class="u-hidden-mobile">Go to Cart</span>
+                    <span aria-hidden="true" class="cart-link__icon-stack">
+                        <span
+                            class="material-symbols-outlined cart-link__icon cart-link__icon--cart"
+                            >shopping_cart</span
+                        >
+                        <span
+                            class="material-symbols-outlined cart-link__icon cart-link__icon--arrow"
+                            >arrow_right_alt</span
+                        >
+                    </span>
+                </a>
+            </nav>
+        </header>
+        <aside class="layout__sidebar">
+            <div class="sidebar__section">
+                <form
+                    aria-label="submit form"
+                    method="post"
+                    class="sidebar__list sidebar__fields checkout-form"
+                >
+                    <label class="fields__input-group"
+                        >Name:
+                        <input
+                            class="input-group__input"
+                            type="text"
+                            required
+                            name="name"
+                    /></label>
+                    <label class="fields__input-group"
+                        >Phone:
+                        <input
+                            class="input-group__input"
+                            type="text"
+                            name="phone"
+                            required
+                    /></label>
+                    <label class="fields__input-group"
+                        >Is a gift:
+                        <select class="input-group__input" name="is_gift">
+                            <option value="no">No</option>
+                            <option value="yes">Yes</option>
+                        </select>
+                    </label>
+                    <button class="sidebar__section__btn">
+                        Proceed to checkout
+                    </button>
+                </form>
+            </div>
+        </aside>
+        <main class="layout__main main">
+            <span aria-label="alert banner" class="banner shadow"
+                >This is a static representation of your cart</span
+            >
+            <h1>Your cart</h1>
+            <ul aria-label="list of all items in the cart" class="cart-list">
+                <li aria-label="added item" class="cart-list__cart-item">
+                    <div
+                        class="cart-item__cover"
+                        style="
+                            background-image: url('/static/images/books/2.webp');
+                        "
+                        aria-label="image of the book 2"
+                    ></div>
+                    <div class="cart-item__details">
+                        <p aria-label="item title" class="cart-item__title">
+                            Gustav Klimt. Complete Paintings
+                        </p>
+                        <p aria-label="item author" class="cart-item__author">
+                            by Tobias G. Natter
+                        </p>
+                        <p aria-label="item edition" class="cart-item__edition">
+                            Hardcover
+                        </p>
+                        <p
+                            aria-label="item availability"
+                            class="cart-item__availability cart-item__availability--several"
+                        >
+                            Available
+                        </p>
+                    </div>
+                    <div class="cart-item__controls">
+                        <p
+                            aria-label="item price"
+                            class="cart-item__price price"
+                        >
+                            219
+                        </p>
+                        <div
+                            aria-label="item quantity controls"
+                            class="quantity-controls"
+                        >
+                            <button aria-label="delete">
+                                <span
+                                    aria-hidden="true"
+                                    class="material-symbols-outlined"
+                                    >delete</span
+                                >
+                            </button>
+                            <input aria-label="item quantity is 1" value="1" />
+                            <button aria-label="add">
+                                <span
+                                    aria-hidden="true"
+                                    class="material-symbols-outlined"
+                                    >add</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </li>
+                <li aria-label="added item" class="cart-list__cart-item">
+                    <div
+                        class="cart-item__cover"
+                        style="
+                            background-image: url('/static/images/books/3.webp');
+                        "
+                        aria-label="image of the book 3"
+                    ></div>
+                    <div class="cart-item__details">
+                        <p aria-label="item title" class="cart-item__title">
+                            The Book of Colour Concepts
+                        </p>
+                        <p aria-label="item author" class="cart-item__author">
+                            by Loske/lowengard
+                        </p>
+                        <p aria-label="item edition" class="cart-item__edition">
+                            Hardcover
+                        </p>
+                        <p
+                            aria-label="item quantity"
+                            class="cart-item__availability cart-item__availability--few"
+                        >
+                            2 left
+                        </p>
+                    </div>
+                    <div class="cart-item__controls">
+                        <p
+                            aria-label="item price"
+                            class="cart-item__price price"
+                        >
+                            3274
+                        </p>
+                        <p
+                            aria-label="2 items added with price 1637"
+                            class="cart-item__price cart-item__price--subtotal price"
+                        >
+                            1637 x 2
+                        </p>
+                        <div
+                            aria-label="item quantity controls"
+                            class="quantity-controls"
+                        >
+                            <button aria-label="remove">
+                                <span
+                                    aria-hidden="true"
+                                    class="material-symbols-outlined"
+                                    >remove</span
+                                >
+                            </button>
+                            <input aria-label="item quantity is 2" value="2" />
+                            <button aria-label="add">
+                                <span
+                                    aria-hidden="true"
+                                    class="material-symbols-outlined"
+                                    >add</span
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p class="cart-total">Total: 3493 SEK</p>
+        </main>
+        <footer class="layout__footer">
+            <h3>Made by Timur</h3>
+            <a class="footer__contact-info" href="tel:0769991122">Call Me!</a>
+        </footer>
+    </body>
+</html>
