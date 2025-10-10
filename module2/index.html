@@ -3,31 +3,148 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- tailwind import -->
         <script src="https://cdn.tailwindcss.com"></script>
-        <title>Document</title>
+
+        <!-- icons import -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+            rel="stylesheet"
+        />
+
+        <link rel="stylesheet" href="styles/index.css" />
+        <title>Super-Post</title>
     </head>
-    <body>
-        <header>
-            <nav
-                class="flex items-center gap-3 md:gap-10 pl-3 md:pl-10 h-20 bg-amber-200 sticky top-0 z-99"
+    <body
+        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-amber-700 selection:text-white"
+    >
+        <header
+            class="max-md:flex md:grid md:grid-cols-[1fr_1fr_1fr] md:text-lg items-center bg-white px-10 sticky top-0 z-99"
+        >
+            <a
+                href="index.html"
+                class="flex items-center gap-5 font-black text-xl whitespace-nowrap w-fit"
             >
+                <span class="material-symbols-outlined text-amber-700 text-3xl"
+                    >chat</span
+                >
+                <span class="max-md:hidden">Super-Post</span>
+            </a>
+            <nav class="grid grid-cols-3 h-20 max-md:ml-auto">
                 <a
-                    class="font-semibold underline underline-offset-4 decoration-amber-700 decoration-2 px-5 py-3"
+                    class="px-2 underline underline-offset-4 decoration-amber-700 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="index.html"
                     >Home</a
                 >
-                <a class="font-semibold px-5 py-3" href="posts.html">Posts</a>
-                <a class="font-semibold px-5 py-3" href="contact.html"
+                <a
+                    class="px-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    href="posts.html"
+                    >Posts</a
+                >
+                <a
+                    class="px-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    href="contact.html"
                     >Contact</a
                 >
             </nav>
         </header>
-        <main>
-            <section></section>
+        <main class="grow container mx-auto mt-14 md:mt-20 mb-20 px-10 md:px-5">
+            <h1 class="font-black text-4xl tracking-wide">
+                A Dynamic Community Platform for<br class="max-md:hidden" />
+                Reading, Commenting, and Engagings
+            </h1>
+            <h2 class="leading-2 mt-5 tracking-wide">
+                Welcome to our interactive website where you can explore
+                user-generated posts, share thoughts through comments, and
+                connect with people from around the world. Designed to be
+                simple, engaging, and responsive — it’s a space to discover new
+                ideas and join meaningful conversations.
+            </h2>
+            <ul
+                class="mt-16 grid md:grid-cols-[1fr_1fr] lg:grid-cols-[1fr_1fr_1fr] gap-10"
+            >
+                <li class="flex flex-col">
+                    <span
+                        class="material-symbols-outlined rounded-xl w-fit bg-amber-700 p-2 text-white"
+                        >chat</span
+                    >
+                    <h3 class="font-semibold mt-6 mb-1.5">
+                        Discover Inspiring Posts
+                    </h3>
+                    <p class="grow">
+                        Browse through a constantly updated feed of stories and
+                        discussions. Each post includes the author’s name,
+                        reactions, and comments so you can easily engage and
+                        share your thoughts.
+                    </p>
+                    <a
+                        class="text-amber-700 flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
+                        href=""
+                        >Learn more
+                        <span class="material-symbols-outlined scale-[.75]"
+                            >arrow_forward</span
+                        ></a
+                    >
+                </li>
+                <li class="flex flex-col">
+                    <span
+                        class="material-symbols-outlined rounded-xl w-fit bg-amber-700 p-2 text-white"
+                        >person</span
+                    >
+                    <h3 class="font-semibold mt-6 mb-1.5">
+                        Interactive User Profiles
+                    </h3>
+                    <p class="grow">
+                        Click on a username to open a profile modal showing user
+                        details such as name, email, and address — all fetched
+                        dynamically via API requests.
+                    </p>
+                    <a
+                        class="text-amber-700 flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
+                        href="posts.html"
+                        >Learn more
+                        <span class="material-symbols-outlined scale-[.75]"
+                            >arrow_forward</span
+                        ></a
+                    >
+                </li>
+                <li class="flex flex-col">
+                    <span
+                        class="material-symbols-outlined rounded-xl w-fit bg-amber-700 p-2 text-white"
+                        >design_services</span
+                    >
+                    <h3 class="font-semibold mt-6 mb-1.5">
+                        Responsive and Accessible Design
+                    </h3>
+                    <p class="grow">
+                        A clean, mobile-first layout built with Flexbox or Grid.
+                        Includes a contact form with real-time validation,
+                        semantic HTML structure, and accessible elements for an
+                        inclusive user experience.
+                    </p>
+                    <a
+                        class="text-amber-700 flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
+                        href="contact.html"
+                        >Learn more
+                        <span class="material-symbols-outlined scale-[.75]"
+                            >arrow_forward</span
+                        ></a
+                    >
+                </li>
+            </ul>
         </main>
-        <footer>
-            Made by
-            <a href="https://github.com/ramz1t" target="_blank">ramz1</a>
+        <footer class="p-10 bg-amber-700 text-white">
+            <p class="text-lg mb-2 font-black">DA214A HT25 @ HKR</p>
+            <span class="font-semibold"
+                >Made by
+                <a
+                    href="https://github.com/ramz1t"
+                    class="underline"
+                    target="_blank"
+                    >ramz1</a
+                ></span
+            >
         </footer>
     </body>
 </html>
