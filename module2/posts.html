@@ -17,7 +17,7 @@
         <title>Super-Post</title>
     </head>
     <body
-        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-amber-700 selection:text-white"
+        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-amber-700 selection:text-white bg-slate-100"
     >
         <header
             class="max-md:flex md:grid md:grid-cols-[1fr_1fr_1fr] md:text-lg items-center bg-white px-10 sticky top-0 z-99"
@@ -31,19 +31,21 @@
                 >
                 <span class="max-md:hidden">Super-Post</span>
             </a>
-            <nav class="grid grid-cols-3 h-20 max-md:ml-auto">
+            <nav
+                class="flex max-md:gap-6 md:grid md:grid-cols-3 h-20 max-md:ml-auto"
+            >
                 <a
-                    class="px-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="index.html"
                     >Home</a
                 >
                 <a
-                    class="px-2 underline underline-offset-4 decoration-amber-700 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="underline md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="posts.html"
                     >Posts</a
                 >
                 <a
-                    class="px-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="contact.html"
                     >Contact</a
                 >
@@ -52,7 +54,7 @@
         <main class="grow container mx-auto my-5 px-10 md:px-5">
             <dialog
                 id="userModal"
-                class="gap-2 fixed md:!m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl outline outline-slate-50 p-6 bg-white shadow-lg max-w-md w-full"
+                class="gap-2 fixed md:m-0 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-xl outline outline-slate-50 p-6 bg-white shadow-lg max-w-md w-full"
             >
                 <h3 id="modalName" class="text-2xl font-bold mb-2">
                     Name Surname
@@ -99,10 +101,7 @@
                 </div>
             </dialog>
             <ul id="posts" class="grid gap-5">
-                <li
-                    class="rounded-lg bg-slate-100 p-5 grid gap-4"
-                    style="display: none"
-                >
+                <!-- <li class="rounded-lg bg-white p-5 grid gap-4">
                     <h2 class="font-semibold text-2xl">${post.title}</h2>
                     <p>
                         Lorem ipsum dolor sit, amet consectetur adipisicing
@@ -139,7 +138,7 @@
                         <p>${c.body}</p>
                         <p>${c.body}</p>
                     </details>
-                </li>
+                </li> -->
             </ul>
             <div id="loader" class="mt-5 mx-auto w-fit font-semibold">
                 Loading more posts...
@@ -158,5 +157,6 @@
             >
         </footer>
         <script src="scripts/posts.js"></script>
+        <script src="scripts/api.js"></script>
     </body>
 </html>
