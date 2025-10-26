@@ -69,7 +69,7 @@ const createCommentsSection = (post) => {
 const createUserButton = (post) => {
     const userBtn = document.createElement("button");
     userBtn.className =
-        "flex items-center gap-2 w-fit text-[var(--color-accent)] hover:text-amber-800 show-modal font-semibold";
+        "flex items-center gap-2 w-fit text-[var(--color-accent)] hover:opacity-90 show-modal font-semibold";
 
     const userIcon = document.createElement("span");
     userIcon.className = "material-symbols-outlined";

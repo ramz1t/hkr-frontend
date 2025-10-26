@@ -1,14 +1,52 @@
 @import 'tailwindcss';
 
-dialog::backdrop {
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.15);
-}
-
 :root {
     --color-accent: oklch(55.5% 0.163 48.998);
     --color-on-accent: #ffffff;
     --color-surface: #ffffff;
     --color-on-surface: #000000;
     --color-background: oklch(96.8% 0.007 247.896);
+    --color-on-background: #000000;
+    --color-outline: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-accent: #ffa530;
+        --color-on-accent: #ffffff;
+        --color-surface: #222222;
+        --color-on-surface: #ffffff;
+        --color-background: #1c1c1c;
+        --color-on-background: #ffffff;
+        --color-outline: #3a3a3a;
+    }
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html {
+    background-color: var(--color-background);
+    color: var(--color-on-background);
+    -webkit-font-smoothing: auto;
+    -moz-osx-font-smoothing: auto;
+    font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+    & *::selection {
+        color: var(--color-on-accent);
+        background-color: var(--color-accent);
+    }
+    &::selection {
+        color: var(--color-on-accent);
+        background-color: var(--color-accent);
+    }
+}
+
+body {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
 }

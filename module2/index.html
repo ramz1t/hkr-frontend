@@ -16,9 +16,7 @@
         <link rel="stylesheet" href="./styles/index.css" />
         <title>Super-Post</title>
     </head>
-    <body
-        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-[var(--color-accent)] selection:text-[var(--color-on-accent)]"
-    >
+    <body class="!bg-[var(--color-surface)]">
         <header
             class="max-md:flex md:grid md:grid-cols-[1fr_1fr_1fr] md:text-lg items-center bg-[var(--color-surface)] px-10 sticky top-0 z-99"
         >
@@ -30,23 +28,25 @@
                     class="material-symbols-outlined text-[var(--color-accent)] text-3xl"
                     >chat</span
                 >
-                <span class="max-md:hidden">Super-Post</span>
+                <span class="max-md:hidden text-[var(--color-on-surface)]"
+                    >Super-Post</span
+                >
             </a>
             <nav
                 class="flex max-md:gap-6 md:grid md:grid-cols-3 h-20 max-md:ml-auto"
             >
                 <a
-                    class="underline md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="underline text-[var(--color-on-surface)] md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="index.html"
                     >Home</a
                 >
                 <a
-                    class="md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="text-[var(--color-on-surface)] md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="posts.html"
                     >Posts</a
                 >
                 <a
-                    class="md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="text-[var(--color-on-surface)] md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="contact.html"
                     >Contact</a
                 >
