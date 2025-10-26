@@ -17,16 +17,17 @@
         <title>Super-Post</title>
     </head>
     <body
-        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-amber-700 selection:text-white"
+        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-[var(--color-accent)] selection:text-[var(--color-on-accent)]"
     >
         <header
-            class="max-md:flex md:grid md:grid-cols-[1fr_1fr_1fr] md:text-lg items-center bg-white px-10 sticky top-0 z-99"
+            class="max-md:flex md:grid md:grid-cols-[1fr_1fr_1fr] md:text-lg items-center bg-[var(--color-surface)] px-10 sticky top-0 z-99"
         >
             <a
                 href="index.html"
                 class="flex items-center gap-5 font-black text-xl whitespace-nowrap w-fit"
             >
-                <span class="material-symbols-outlined text-amber-700 text-3xl"
+                <span
+                    class="material-symbols-outlined text-[var(--color-accent)] text-3xl"
                     >chat</span
                 >
                 <span class="max-md:hidden">Super-Post</span>
@@ -35,17 +36,17 @@
                 class="flex max-md:gap-6 md:grid md:grid-cols-3 h-20 max-md:ml-auto"
             >
                 <a
-                    class="underline md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="underline md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="index.html"
                     >Home</a
                 >
                 <a
-                    class="md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="posts.html"
                     >Posts</a
                 >
                 <a
-                    class="md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="contact.html"
                     >Contact</a
                 >
@@ -68,7 +69,7 @@
             >
                 <li class="flex flex-col">
                     <span
-                        class="material-symbols-outlined rounded-xl w-fit bg-amber-700 p-2 text-white"
+                        class="material-symbols-outlined rounded-xl w-fit bg-[var(--color-accent)] p-2 text-[var(--color-on-accent)]"
                         >chat</span
                     >
                     <h3 class="font-semibold mt-6 mb-1.5">
@@ -81,7 +82,7 @@
                         share your thoughts.
                     </p>
                     <a
-                        class="text-amber-700 flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
+                        class="text-[var(--color-accent)] flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
                         href=""
                         >Learn more
                         <span class="material-symbols-outlined scale-[.75]"
@@ -91,7 +92,7 @@
                 </li>
                 <li class="flex flex-col">
                     <span
-                        class="material-symbols-outlined rounded-xl w-fit bg-amber-700 p-2 text-white"
+                        class="material-symbols-outlined rounded-xl w-fit bg-[var(--color-accent)] p-2 text-[var(--color-on-accent)]"
                         >person</span
                     >
                     <h3 class="font-semibold mt-6 mb-1.5">
@@ -103,7 +104,7 @@
                         dynamically via API requests.
                     </p>
                     <a
-                        class="text-amber-700 flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
+                        class="text-[var(--color-accent)] flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
                         href="posts.html"
                         >Learn more
                         <span class="material-symbols-outlined scale-[.75]"
@@ -113,7 +114,7 @@
                 </li>
                 <li class="flex flex-col">
                     <span
-                        class="material-symbols-outlined rounded-xl w-fit bg-amber-700 p-2 text-white"
+                        class="material-symbols-outlined rounded-xl w-fit bg-[var(--color-accent)] p-2 text-[var(--color-on-accent)]"
                         >design_services</span
                     >
                     <h3 class="font-semibold mt-6 mb-1.5">
@@ -126,7 +127,7 @@
                         inclusive user experience.
                     </p>
                     <a
-                        class="text-amber-700 flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
+                        class="text-[var(--color-accent)] flex items-center gap-0.5 hover:gap-1.5 transition-all text-sm mt-5"
                         href="contact.html"
                         >Learn more
                         <span class="material-symbols-outlined scale-[.75]"
@@ -136,7 +137,9 @@
                 </li>
             </ul>
         </main>
-        <footer class="p-10 bg-amber-700 text-white">
+        <footer
+            class="p-10 bg-[var(--color-accent)] text-[var(--color-on-accent)]"
+        >
             <p class="text-lg mb-2 font-black">DA214A HT25 @ HKR</p>
             <span class="font-semibold"
                 >Made by

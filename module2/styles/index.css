@@ -4,3 +4,11 @@ dialog::backdrop {
     backdrop-filter: blur(3px);
     background-color: rgba(0, 0, 0, 0.15);
 }
+
+:root {
+    --color-accent: oklch(55.5% 0.163 48.998);
+    --color-on-accent: #ffffff;
+    --color-surface: #ffffff;
+    --color-on-surface: #000000;
+    --color-background: oklch(96.8% 0.007 247.896);
+}

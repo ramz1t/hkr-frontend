@@ -11,7 +11,7 @@ const createReactionSection = (post) => {
     const divReactions = document.createElement("div");
     divReactions.className = "flex items-center gap-2";
 
-    const iconClassname = "material-symbols-outlined hover:text-amber-700 hover:scale-110 origin-center cursor-pointer";
+    const iconClassname = "material-symbols-outlined hover:text-[var(--color-accent)] hover:scale-110 origin-center cursor-pointer";
 
     const spanLike = document.createElement("span");
     spanLike.className = iconClassname;
@@ -37,7 +37,7 @@ const createTagList = (tags) => {
     ulTags.className = "flex flex-wrap gap-2";
     tags.forEach(tag => {
         const liTag = document.createElement("li");
-        liTag.className = "bg-amber-700 rounded-full px-3 py-1 text-white font-semibold";
+        liTag.className = "bg-[var(--color-accent)] rounded-full px-3 py-1 text-[var(--color-on-accent)] font-semibold";
         liTag.textContent = tag;
         ulTags.appendChild(liTag);
     });
@@ -69,7 +69,7 @@ const createCommentsSection = (post) => {
 const createUserButton = (post) => {
     const userBtn = document.createElement("button");
     userBtn.className =
-        "flex items-center gap-2 w-fit text-amber-700 hover:text-amber-800 show-modal font-semibold";
+        "flex items-center gap-2 w-fit text-[var(--color-accent)] hover:text-amber-800 show-modal font-semibold";
 
     const userIcon = document.createElement("span");
     userIcon.className = "material-symbols-outlined";
@@ -87,7 +87,7 @@ const createUserButton = (post) => {
 
 const createPostElement = (post) => {
     const li = document.createElement("li");
-    li.className = "rounded-lg bg-white p-5 grid gap-4";
+    li.className = "rounded-lg bg-[var(--color-surface)] p-5 grid gap-4";
 
     // title
     const h2 = document.createElement("h2");

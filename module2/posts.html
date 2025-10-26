@@ -17,16 +17,17 @@
         <title>Super-Post</title>
     </head>
     <body
-        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-amber-700 selection:text-white bg-slate-100"
+        class="min-h-dvh flex flex-col subpixel-antialiased font-sans selection:bg-[var(--color-accent)] selection:text-[var(--color-on-accent)] bg-[var(--color-background)]"
     >
         <header
-            class="max-md:flex md:grid md:grid-cols-[1fr_1fr_1fr] md:text-lg items-center bg-white px-10 sticky top-0 z-99"
+            class="max-md:flex md:grid md:grid-cols-[1fr_1fr_1fr] md:text-lg items-center bg-[var(--color-surface)] px-10 sticky top-0 z-99"
         >
             <a
                 href="index.html"
                 class="flex items-center gap-5 font-black text-xl whitespace-nowrap w-fit"
             >
-                <span class="material-symbols-outlined text-amber-700 text-3xl"
+                <span
+                    class="material-symbols-outlined text-[var(--color-accent)] text-3xl"
                     >chat</span
                 >
                 <span class="max-md:hidden">Super-Post</span>
@@ -35,17 +36,17 @@
                 class="flex max-md:gap-6 md:grid md:grid-cols-3 h-20 max-md:ml-auto"
             >
                 <a
-                    class="md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="index.html"
                     >Home</a
                 >
                 <a
-                    class="underline md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="underline md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="posts.html"
                     >Posts</a
                 >
                 <a
-                    class="md:px-2 decoration-amber-700 underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
+                    class="md:px-2 decoration-[var(--color-accent)] underline-offset-4 decoration-2 font-semibold h-full w-full flex items-center justify-center hover:opacity-80"
                     href="contact.html"
                     >Contact</a
                 >
@@ -61,31 +62,36 @@
                 </h3>
                 <div class="grid gap-3 mt-5">
                     <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-amber-700"
+                        <span
+                            class="material-symbols-outlined text-[var(--color-accent)]"
                             >email</span
                         >
                         <p id="modalEmail" class="text-gray-600">Email</p>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-amber-700"
+                        <span
+                            class="material-symbols-outlined text-[var(--color-accent)]"
                             >phone</span
                         >
                         <p id="modalPhone" class="text-gray-600">Phone</p>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-amber-700"
+                        <span
+                            class="material-symbols-outlined text-[var(--color-accent)]"
                             >alternate_email</span
                         >
                         <p id="modalUsername" class="text-gray-600">username</p>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-amber-700"
+                        <span
+                            class="material-symbols-outlined text-[var(--color-accent)]"
                             >house</span
                         >
                         <p id="modalAddress" class="text-gray-600">Address</p>
                     </div>
                     <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-amber-700"
+                        <span
+                            class="material-symbols-outlined text-[var(--color-accent)]"
                             >cake</span
                         >
                         <p id="modalBirthday" class="text-gray-600">Birthday</p>
@@ -94,7 +100,7 @@
                 <div class="mt-4 flex justify-end">
                     <button
                         id="closeModal"
-                        class="px-4 py-2 bg-amber-700 text-white rounded-lg hover:bg-amber-800"
+                        class="px-4 py-2 bg-[var(--color-accent)] text-white rounded-lg hover:bg-amber-800"
                     >
                         Close
                     </button>
@@ -113,12 +119,12 @@
                     <a href="user.html?user=1">User: ${post.username}</a>
                     <ul class="flex flex-wrap gap-2">
                         <li
-                            class="bg-amber-700 rounded-full px-3 py-1 text-white font-semibold"
+                            class="bg-[var(--color-accent)] rounded-full px-3 py-1 text-white font-semibold"
                         >
                             Tag 1
                         </li>
                         <li
-                            class="bg-amber-700 rounded-full px-3 py-1 text-white font-semibold"
+                            class="bg-[var(--color-accent)] rounded-full px-3 py-1 text-white font-semibold"
                         >
                             Tag 2
                         </li>
@@ -144,7 +150,9 @@
                 Loading more posts...
             </div>
         </main>
-        <footer class="p-10 bg-amber-700 text-white">
+        <footer
+            class="p-10 bg-[var(--color-accent)] text-[var(--color-on-accent)]"
+        >
             <p class="text-lg mb-2 font-black">DA214A HT25 @ HKR</p>
             <span class="font-semibold"
                 >Made by
